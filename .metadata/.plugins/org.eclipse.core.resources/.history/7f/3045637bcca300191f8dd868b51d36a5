@@ -1,0 +1,72 @@
+package com.shobhit;
+import java.util.*;
+
+public class ShoppingCart {
+	private Item shopList= new Item();
+	
+	public void addShopItem(Item item){
+		shopList.setItemName(item.getItemName());
+		shopList.setItemPrice(item.getItemPrice());
+		shopList.setItemQuantity(item.getItemQuantity());
+	}
+	public void createList(){
+		Item newItem = new Item();
+		newItem.setItemName("bread");
+		newItem.setItemPrice(20);
+		newItem.setItemQuantity(100);
+	}	
+
+	public void modifyShopItem(String currentItem, String newItem){
+		
+	        int position = findItem(currentItem);
+	        if(position >= 0) {
+	            modifyShopItem(position, newItem);
+	        }
+	}
+	
+	public void modifyShopItem(int position, String item){
+		shopList.set(position, item);
+	}
+	
+	
+	private int findItem(String searchItem){
+		return shopList.indexOf(searchItem);
+	}
+	
+	public void removeShopItem(String item){
+		int position= findItem(item);
+		if(position>=0)
+			removeShopItem(position);
+	}
+	
+	private void removeShopItem(int position){
+		shopList.remove(position);
+	}
+	
+	public void printshopList() {
+        System.out.println("You have " + shopList.size() + " items in your shopping list");
+        for(int i=0; i< shopList.size(); i++) {
+            System.out.println((i+1) + ". " + shopList.get(i));
+        }
+    }
+	
+}
+
+
+
+
+
+
+
+    
+
+
+    
+
+    
+
+    
+  
+
+    
+

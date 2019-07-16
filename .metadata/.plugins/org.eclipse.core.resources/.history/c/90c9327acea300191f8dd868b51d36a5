@@ -1,0 +1,98 @@
+package com.shobhit;
+import java.io.*; 
+import java.util.*;
+
+public class Main {	
+	
+	private static ShoppingCart shopList= new ShoppingCart() ;
+	private static Scanner scanner= new Scanner(System.in);
+	
+	public static void main(String[] args) {
+		boolean quit= false;
+		int choice=0;
+		
+		shopList.createList();
+		
+		printInstructions();
+				
+		/*while(!quit){
+			System.out.println("Enter your choice:");
+			choice= scanner.nextInt();
+			scanner.nextLine();
+			switch(choice){
+			case 0:
+				printInstructions();
+				break;
+			case 1:
+				addItem();
+				break;
+			case 2:
+				removeItem();
+				break;
+			case 3:
+				updateItem();
+				break;
+			case 4:
+				printList();
+				break;
+			case 5:
+				quit= true;
+				break;
+			}
+			
+				
+			
+			
+		}*/
+															
+	}
+	
+	public static void printInstructions(){
+		System.out.println("\t 0.  To print Instructions");
+		System.out.println("\t 1.  To add item");
+		System.out.println("\t 2.  To remove item");
+		System.out.println("\t 3.  To update/modify item");
+		System.out.println("\t 4.  To print list");
+		System.out.println("\t 5.  To quit");
+	}
+
+		
+	/*public static void addItem(){
+		System.out.println("Enter item name:\n");
+		//
+		shopList.addShopItem(scanner.nextLine());
+	}
+	
+	public static void removeItem() {
+	    System.out.print("Enter item name: ");
+	    String itemName = scanner.nextLine();
+	    shopList.removeShopItem(itemName);
+	}
+	
+	public static void updateItem(){
+		
+		    System.out.print("Current item name: ");
+		    String itemName = scanner.nextLine();
+		    System.out.print("Enter new item: ");
+		    String newItem = scanner.nextLine();
+		    shopList.modifyShopItem(itemName, newItem);
+		
+	}
+	
+	public static void printList(){
+		shopList.printshopList();
+	} 
+	*/
+}
+
+
+
+
+
+
+
+
+
+
+
+

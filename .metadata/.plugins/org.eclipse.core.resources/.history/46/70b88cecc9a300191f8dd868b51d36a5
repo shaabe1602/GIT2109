@@ -1,0 +1,12 @@
+package com.shobhit;
+
+public class Item {
+	public String itemName;
+	public double itemPrice;
+	public int itemQuantity;
+	
+	
+	
+	
+
+}

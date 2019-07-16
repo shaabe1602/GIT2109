@@ -1,0 +1,7 @@
+package com.shobhit;
+
+public class Number {
+	private String n1;
+	private String n2;
+
+}

@@ -1,0 +1,20 @@
+package com.shobhit;
+import java.io.*; 
+import java.util.*;
+
+public class Main {	
+	
+	private ArrayList<String> ShopList= new ArrayList<String>();
+	Scanner scanner= new Scanner(System.in);
+	
+	public static void main(String[] args) {
+		int choice=0;
+		boolean quit=fa
+															
+	}
+	
+	public static void printInstructions(){
+		
+	}
+
+}

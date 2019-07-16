@@ -1,0 +1,96 @@
+package com.shobhit;
+import java.util.*;
+
+public class ShoppingCart {
+	//private Item shopList= new Item();
+	private ArrayList<Item> stockItems = new ArrayList<Item>();
+	
+	private ArrayList<Item> shopList = new ArrayList<Item>();
+	
+	public void addShopItem(String item){
+		int index = findItem(item);
+		
+		shopList.add(stockItems.get(index));
+	}
+	private int findItem(String searchItem){
+		return stockItems.indexOf(searchItem);
+	}
+	
+	public void createList(){
+		Item newItem1 = new Item();
+		newItem1.setItemName("bread");
+		newItem1.setItemPrice(20);
+		newItem1.setItemQuantity(100);
+		stockItems.add(newItem1);
+		
+		Item newItem2 = new Item();
+		newItem2.setItemName("butter");
+		newItem2.setItemPrice(30);
+		newItem2.setItemQuantity(75);
+		stockItems.add(newItem2);
+		
+		Item newItem3 = new Item();
+		newItem3.setItemName("egg");
+		newItem3.setItemPrice(7);
+		newItem3.setItemQuantity(200);
+		stockItems.add(newItem3);
+		
+		Item newItem4 = new Item();
+		newItem4.setItemName("milk");
+		newItem4.setItemPrice(20);
+		newItem4.setItemQuantity(100);
+		stockItems.add(newItem4);
+	}
+	
+	public void printStockItems(){
+		for(int i=0 ; i<stockItems.size();i++){
+			System.out.println(stockItems.get(i).getItemName() + "   " + stockItems.get(i).getItemPrice() + "   " + stockItems.get(i).getItemQuantity());
+		}
+	}
+
+	/*public void modifyShopItem(String currentItem, String newItem){
+		
+	        int position = findItem(currentItem);
+	        if(position >= 0) {
+	            modifyShopItem(position, newItem);
+	        }
+	}
+	*/
+	/*
+	public void removeShopItem(String item){
+		int position= findItem(item);
+		if(position>=0)
+			removeShopItem(position);
+	}
+	
+	private void removeShopItem(int position){
+		shopList.remove(position);
+	}
+	
+	public void printshopList() {
+        System.out.println("You have " + shopList.size() + " items in your shopping list");
+        for(int i=0; i< shopList.size(); i++) {
+            System.out.println((i+1) + ". " + shopList.get(i));
+        }
+    }*/
+	
+}
+
+
+
+
+
+
+
+    
+
+
+    
+
+    
+
+    
+  
+
+    
+

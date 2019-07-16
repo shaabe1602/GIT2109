@@ -1,0 +1,121 @@
+package com.shobhit;
+
+public class Number {
+	//private String n1;
+	//private String n2;
+	private int base;
+	
+	
+	
+	
+	public int getBase() {
+		return base;
+	}
+
+	public void setBase(int base) {
+		this.base = base;
+	}
+
+	
+	public void add(String h1, String h2){
+		int d1= hexToDec(h1);
+		int d2= hexToDec(h2);
+		
+		int d3= d1+d2;
+		System.out.println("Adding :" + decToHex(d3));
+		System.out.println(decToHex(d3));
+		
+	}
+	
+	
+	public void subtract(String h1, String h2){
+		int d1= hexToDec(h1);
+		int d2= hexToDec(h2);
+		
+		//Assuming d1 is greater than d2
+		if(d1-d2 >0){
+			System.out.println("Subtracting :"+ decToHex(d1-d2));
+		}
+		else{
+			System.out.println("Subtracting :"+ "-" +decToHex(d2-d1));
+		}
+			
+	}
+	
+	public void divide(String h1, String h2){
+		int d1= hexToDec(h1);
+		int d2= hexToDec(h2);
+		
+		if(d1%d2 !=d1){
+			System.out.println("Subtracting :"+ decToHex(d1/d2));
+		}
+		else{
+			System.out.println("Subtracting :"+ "-" +decToHex(d2/d1));
+		}
+		
+		
+	}
+	
+	public void multiply(String h1, String h2){
+		int d1= hexToDec(h1);
+		int d2= hexToDec(h2);
+		
+		System.out.println("Multiplying :"+ decToHex(d1*d2));		
+		
+	}
+	
+	public int hexToDec(String hexVal){
+		int decVal=0;
+		for(int i=hexVal.length()-1; i>0; i--){
+			if(hexVal.charAt(i)>='0' || hexVal.charAt(i)<='9'){ 
+		            decVal += (hexVal.charAt(i)- 48)*base; 
+		                  
+		            // incrementing base by power 
+		            base = base * 16; 
+		        } 
+			
+		        else if (hexVal.charAt(i)>='A' && hexVal.charAt(i)<='F') 
+		        { 
+		            decVal += (hexVal.charAt(i) - 55)*base; 
+		          
+		            // incrementing base by power 
+		            base =base*16;
+			}
+		}
+		
+	return decVal;
+	}
+	
+	public String decToHex(int decVal){
+		char[] hex= new char[100];
+		String hexVal;
+        int i = 0; 
+        while(decVal!=0) 
+        {    
+            // temporary variable to store remainder 
+            int temp  = 0; 
+           
+            // storing remainder in temp variable. 
+            temp = decVal % 16; 
+           
+            // check if temp < 10 
+            if(temp < 10) 
+            { 
+                hex[i] = (char)(temp + 48); 
+                i++; 
+            } 
+            else
+            { 
+                hex[i] = (char)(temp + 55); 
+                i++; 
+            } 
+           
+            decVal/=base;
+        } 
+		
+		hexVal= String.valueOf(hex);
+		
+		
+		return hexVal;
+	}
+}

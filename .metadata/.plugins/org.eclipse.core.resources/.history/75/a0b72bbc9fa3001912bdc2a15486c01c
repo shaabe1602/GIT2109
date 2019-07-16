@@ -1,0 +1,19 @@
+package com.shobhit;
+import java.util.*;
+
+public class ShoppingCart {
+	private ArrayList<String> shopList= new ArrayList<String>();
+	
+	public static void addShopItem(String item){
+		
+	}
+	
+	public static void modifyShopItem(String item, String newItem){
+		
+	}
+	
+	public static void removeShopItem(String item){
+		
+	}
+	
+}
