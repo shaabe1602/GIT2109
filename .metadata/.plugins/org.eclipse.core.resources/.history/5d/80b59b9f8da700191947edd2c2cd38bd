@@ -53,10 +53,10 @@ public class Main {
         do{
         	if(validateEntry <0)
             System.out.println("!Enter positive number :");
-            while(!sc.hasNextInt()){
+            while(!scanner.hasNextInt()){
                 System.out.println("Enter integer only :");
-                sc.next();
-            }validateEntry= sc.nextInt();
+                scanner.next();
+            }validateEntry= scanner.nextInt();
         }while(validateEntry<0);
 
         return validateEntry;
